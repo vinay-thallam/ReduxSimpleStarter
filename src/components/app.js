@@ -6,8 +6,14 @@ export default class App extends Component {
   render() {
     return (
       <div>
-      	<BookList/>
-      	<BookDetail/>
+      	<div className="row">
+      		<BookList/>
+      		<BookDetail/>
+      	</div>
+      	<hr/>
+      	<div className="row">
+      		weather forcast app
+      	</div>
       </div>
     );
   }
