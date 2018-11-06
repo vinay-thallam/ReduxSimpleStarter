@@ -15,6 +15,11 @@ pipeline {
                 sh './check_version.sh'
             }
         }
+        stage('Human Approval') {
+            steps {
+                input "Can the deployment be started ?"
+            }
+        }
     }
     post {
         always {
