@@ -19,6 +19,9 @@ pipeline {
     post {
         always {
             echo 'This will always run'
+            mail to: 'vinay.thallam@jifflenow.com',
+             subject: "Finished Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Hurray !!! Success"
         }
         success {
             echo 'This will run only if successful'
