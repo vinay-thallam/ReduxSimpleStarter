@@ -1,5 +1,9 @@
 pipeline {
     agent { docker { image 'node:6.3' } }
+     environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+    }
     stages {
         stage('build') {
             steps {
